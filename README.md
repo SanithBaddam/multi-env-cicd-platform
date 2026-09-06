@@ -1,19 +1,16 @@
 # Multi-Environment CI/CD Platform
 
-A reusable delivery pattern for containerized services promoted through development, staging, and production with immutable image tags and environment gates.
+Reusable delivery pattern for containerized services promoted through development, staging, and production using immutable image tags and environment gates.
 
-## Design principles
-
-- Build once, promote the same artifact
+## Principles
+- Build once and promote the same artifact
 - Separate CI from deployment concerns
-- Use short-lived cloud identity instead of static credentials
+- Prefer short-lived cloud identity over static credentials
 - Require production approvals through protected environments
 - Keep deployment configuration versioned and reviewable
-
-## Promotion model
 
 ```text
 PR -> test -> build -> scan -> dev -> stage -> production approval -> prod
 ```
 
-This repository contains a small Python service only to exercise the platform. The primary engineering focus is the pipeline, container lifecycle, Kubernetes manifests, and promotion controls.
+The sample Python service exists to exercise the platform; the primary focus is pipeline design, container lifecycle, Kubernetes deployment, and promotion controls.
